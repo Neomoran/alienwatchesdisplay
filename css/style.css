@@ -1,0 +1,122 @@
+body {
+ 
+  overflow: hidden;
+  background: #eee;
+   min-height: 100vh;
+   min-width: 100vw;
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+ 
+}
+
+header{
+  text-align: center;
+  font-family: verdana, sans-serif;
+}
+.myButton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+  	padding-top: 270px;
+
+}
+.myButton a button{
+  padding: 10px 10px;
+  box-shadow: 3px 4px 4px  rgba(0,0,0,0.1);
+  background:orange;
+  color: #fff;
+  border-radius: 6%;
+  outline: none;
+  cursor: pointer;
+  transition: background 800ms;
+}
+.myButton a button:hover{
+	background:#ffa400;;
+}
+.slideShow {
+   min-width: 100%;
+  margin: 0 auto;
+  padding-top: 6%;
+   min-height: 100%;
+  box-sizing: border-box;
+}
+.content {
+  margin: auto;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
+}
+.contentCarousel {
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotate 15s infinite linear;
+  transform-style: preserve-3d;
+}
+img {
+  width: 300px;
+}
+.contentCarousel:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.contentCarousel figure {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #4d444d;
+  overflow: hidden;
+  position: absolute;
+}
+.contentCarousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(2) {
+  transform: rotateY(40deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(3) {
+  transform: rotateY(80deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(4) {
+  transform: rotateY(120deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(5) {
+  transform: rotateY(160deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(6) {
+  transform: rotateY(200deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(7) {
+  transform: rotateY(240deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(8) {
+  transform: rotateY(280deg) translateZ(300px);
+}
+.contentCarousel figure:nth-child(9) {
+  transform: rotateY(320deg) translateZ(300px);
+}
+.shadow {
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 2px;
+}
+.contentCarousel img {
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+.contentCarousel img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
